@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;500&display=swap");
+
+@import "./assests/mixins.scss";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f1f2f6;
+}
+*,
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Inter;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+h6 {
+  font-weight: 600;
+}
+
+// Switch styling
+.custom-switch {
+}
+
+.custom-switch .custom-control-label::before {
+  padding: 0.8em 1.5em;
+  border-radius: 1.5rem;
+  top: 0.23rem;
+}
+.custom-switch .custom-control-label::after {
+  padding: 0.7em;
+  border-radius: 1.5rem;
+}
+.custom-control-label {
+  position: initial;
+}
+.custom-switch .custom-control-input:checked ~ .custom-control-label::after {
+  background-color: #fff;
+  -webkit-transform: translateX(0.75rem);
+  transform: translateX(1.5rem);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background: transparent;
+  bottom: 0;
+  color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  color: #fff;
+  border-color: $primary-blue-color;
+  background-color: $primary-blue-color;
+}
+
+.form-control:focus {
+  box-shadow: none !important;
+}
+
+.custom-control-input:focus ~ .custom-control-label::before {
+  box-shadow: none !important;
+  border: #adb5bd solid 1px !important;
+}

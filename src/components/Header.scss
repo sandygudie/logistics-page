@@ -1,0 +1,58 @@
+@import "../assests/mixins.scss";
+nav {
+  background-color: #0746a7;
+  padding: 1em 2.5em;
+  @include flex(center, space-between, row);
+  @media only screen and (max-width: $bp-md) {
+    display: block;
+    padding: 1em;
+  }
+  .left-content {
+    flex-basis: 50%;
+    @include flex(center, space-between, row);
+    a {
+      color: #ffffff;
+    }
+  }
+  .search-container {
+    width: 70%;
+    position: relative;
+    input {
+      @include input($search-color, 100%);
+
+      &::placeholder {
+        color: rgb(229, 226, 226);
+      }
+    }
+    .fa {
+      top: 13px;
+      right: 220px;
+      font-size: 1rem;
+      color: #fff;
+      font-weight: bold;
+    }
+    @media only screen and (max-width: $bp-md) {
+      display: none;
+    }
+  }
+
+  .right-content {
+    @media only screen and (max-width: $bp-md) {
+      margin-top: 1.5em;
+    }
+
+    .req-quote-btn {
+      @include button(60%, #fff);
+      margin-right: 30px;
+      border: 2px solid #3a6bb8;
+      border-radius: 4px;
+    }
+    .book-shipment-btn {
+      @include button(60%, #fff);
+      line-height: 1.5em;
+      background-color: #5cc686;
+      border: none;
+      border-radius: 4px;
+    }
+  }
+}

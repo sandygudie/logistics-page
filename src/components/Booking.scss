@@ -1,0 +1,263 @@
+@import "../assests/mixins.scss";
+
+.container {
+  width: 75%;
+  margin: 2em auto 3em auto;
+  position: relative;
+  @media only screen and (max-width: $bp-md) {
+    width: 100%;
+  }
+  .fa-arrow-left {
+    position: absolute;
+    top: 0px;
+    left: -65px;
+    font-size: 18px;
+  }
+  .heading {
+    margin-bottom: 2em;
+    h3 {
+      margin: 0.5em 0em;
+      font-size: 23px;
+      font-weight: 600;
+    }
+    p {
+      font-weight: normal;
+      font-size: 13px;
+      color: gray;
+      margin: 1em 0em 3em 0em;
+    }
+  }
+  .content {
+    padding: 2em;
+    margin: 1.3em 0em;
+    background-color: #fff;
+    border-radius: 3px;
+
+    .service {
+      margin-top: 2em;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      display: grid;
+
+      grid-column-gap: 6px;
+      grid-row-gap: 6px;
+      gap: 20px;
+
+      div {
+        border: 1px solid rgb(230, 225, 225);
+        border-radius: 4px;
+        padding: 1em;
+        color: $gray;
+        position: relative;
+        overflow: hidden;
+
+        @include flex(center, space-between, row);
+
+        &:hover {
+          background-color: #0746a7;
+          color: white;
+          .iconstyles {
+            color: white;
+          }
+        }
+        p {
+          font-weight: 500;
+          font-size: 15px;
+        }
+        .icon-airfreight {
+          position: absolute;
+          bottom: -17px;
+          right: -24px;
+          color: $gray;
+          font-size: 4.5em;
+        }
+        .icon-seafreight {
+          position: absolute;
+          bottom: -20px;
+          right: -19px;
+          color: $gray;
+          font-size: 4.5em;
+        }
+        .icon-truck {
+          position: absolute;
+          bottom: -7px;
+          right: -9px;
+          color: $gray;
+          font-size: 4.5em;
+        }
+        .icon-police {
+          position: absolute;
+          bottom: -20px;
+          right: -28px;
+          color: $gray;
+          font-size: 4.5em;
+          transform: rotateY(180deg);
+        }
+      }
+    }
+  }
+
+  .content {
+    .warning {
+      font-size: x-large;
+    }
+    .info-top {
+      @include flex(center, space-between, row);
+      @media only screen and (max-width: $bp-md) {
+        display: block;
+      }
+      .info-btn {
+        margin: 1em 0em;
+        button {
+          padding: 0.6em 1.5em !important;
+          @include button(60%, $gray);
+          border: 1px solid rgb(230, 225, 225);
+        }
+      }
+      .form-group {
+        margin: 1em 0em;
+        // margin: 0em;
+        flex-basis: 35%;
+        .fa {
+          color: rgb(80, 78, 78);
+          top: 9px;
+          left: 1rem;
+          font-size: 1rem;
+        }
+
+        input {
+          padding: 0.8em 3em !important;
+          @include input($input-color-gray, 100%);
+        }
+      }
+    }
+    .info-bottom {
+      // margin: 3em 0em 1em 0em;
+      @include flex(center, space-between, row);
+      @media only screen and (max-width: $bp-md) {
+        display: block;
+      }
+      .form-group {
+        margin-bottom: 0em;
+        width: 30%;
+        @media only screen and (max-width: $bp-md) {
+          width: 100%;
+        }
+        .fas {
+          top: 10px;
+          left: 1rem;
+          font-size: 1rem;
+        }
+        input {
+          color: $gray !important ;
+          padding: 0.8em 3em !important;
+          @include input($input-color-gray, 100%);
+        }
+      }
+
+      select {
+        margin: 1em 0em;
+        color: $gray !important ;
+        @include input($input-color-gray, 30%);
+        @media only screen and (max-width: $bp-mds) {
+          width: 100%;
+        }
+      }
+      .cargo-value {
+        color: $gray !important ;
+        width: 30%;
+        @include input($input-color-gray, 30%);
+        @media only screen and (max-width: $bp-md) {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .cargo {
+    @include flex(start, space-between, row);
+    @media only screen and (max-width: $bp-md) {
+      display: block;
+    }
+    .cargo-details {
+      flex-basis: 40%;
+      @include flex(start, space-between, column);
+
+      .package-details {
+        margin-top: 2em;
+
+        .package-size {
+          @include flex(center, space-between, row);
+          margin-bottom: 2em;
+          background-color: $input-color-gray;
+          width: 90%;
+          padding: 0.1em;
+          border-radius: 5px;
+          span {
+            font-size: 14px;
+            border-radius: 4px;
+            text-align: center;
+            padding: 0.5em 1em;
+            width: 50%;
+            font-weight: 500;
+            color: $gray;
+          }
+          .active {
+            background-color: white;
+            color: $primary-blue-color;
+          }
+        }
+        .load {
+          margin: 1em 0em;
+          @include flex(center, space-between, row);
+          input {
+            height: 50px;
+            width: 90%;
+          }
+          .form-control {
+            &:focus {
+              border-color: #ced4da !important;
+              outline: none;
+              box-shadow: none !important;
+            }
+          }
+        }
+      }
+    }
+    .right {
+      @media only screen and (max-width: $bp-md) {
+        width: 70%;
+        margin: 1em auto;
+      }
+      .custom-control-label {
+        padding-top: 0.4em;
+        font-size: 15px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .content {
+    .additional {
+      margin: 1.5em 2em;
+      @include flex(center, space-between, row);
+      @media only screen and (max-width: $bp-large) {
+        display: block;
+        margin: 0em 0em 0em 2em;
+      }
+      .others {
+        @include flex(initial, space-between, column);
+        .custom-control {
+          @include flex(center, space-between, row);
+          margin: 1.5em 0em;
+          h6 {
+            font-size: 16px;
+          }
+          p {
+            font-size: 13px;
+            padding: 0.5em 0em;
+          }
+        }
+      }
+    }
+  }
+}
