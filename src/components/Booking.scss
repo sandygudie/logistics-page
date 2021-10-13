@@ -2,7 +2,7 @@
 
 .container {
   width: 75%;
-  margin: 2em auto 3em auto;
+  margin: 4em auto 3em auto;
   position: relative;
   @media only screen and (max-width: $bp-md) {
     width: 100%;
@@ -12,6 +12,11 @@
     top: 0px;
     left: -65px;
     font-size: 18px;
+    @media only screen and (max-width: $bp-md) {
+      top: -42px;
+      left: 12px;
+    }
+
   }
   .heading {
     margin-bottom: 2em;
@@ -60,7 +65,7 @@
           }
         }
         p {
-          font-weight: 500;
+          font-weight: 400;
           font-size: 15px;
         }
         .icon-airfreight {
@@ -127,6 +132,9 @@
         input {
           padding: 0.8em 3em !important;
           @include input($input-color-gray, 100%);
+          &::placeholder {
+            color: #adadad;
+          }
         }
       }
     }
@@ -192,6 +200,9 @@
           width: 90%;
           padding: 0.1em;
           border-radius: 5px;
+          @media only screen and (max-width: $bp-md) {
+            width: 100%;
+          }
           span {
             font-size: 14px;
             border-radius: 4px;

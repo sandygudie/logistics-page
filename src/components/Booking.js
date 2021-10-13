@@ -60,7 +60,7 @@ function Booking() {
             <button>Export</button>
           </div>
           <div class="form-group position-relative">
-            {/* <label for="email" class="sr-only">Email</label> */}
+          
             <i class="fa fa-map-marker-alt  position-absolute"></i>
 
             <input
@@ -71,7 +71,7 @@ function Booking() {
             />
           </div>
           <div class="form-group position-relative">
-            {/* <label for="email" class="sr-only">Email</label> */}
+          
             <i class="fa fa-map-marker-alt  position-absolute"></i>
 
             <input
