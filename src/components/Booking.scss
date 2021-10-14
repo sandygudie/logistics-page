@@ -198,8 +198,9 @@
           margin-bottom: 2em;
           background-color: $input-color-gray;
           width: 90%;
-          padding: 0.1em;
+          padding: 0.15em;
           border-radius: 5px;
+          
           @media only screen and (max-width: $bp-md) {
             width: 100%;
           }
@@ -220,6 +221,8 @@
         .load {
           margin: 1em 0em;
           @include flex(center, space-between, row);
+         .volume {
+           position: relative;
           input {
             height: 50px;
             width: 90%;
@@ -231,6 +234,15 @@
               box-shadow: none !important;
             }
           }
+.group-text{
+  position: absolute;
+    right: 29px;
+    bottom: 12px;
+    color:$gray;
+    font-size: 12px;
+}
+          }
+          
         }
       }
     }

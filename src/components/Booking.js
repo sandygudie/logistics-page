@@ -121,7 +121,7 @@ function Booking() {
             </div>
 
             <div className="load">
-              <div>
+              <div className="volume">
                 <label for="input1">
                   <span class="h6 small bg-white text-muted pt-1 pl-1 pr-1 ml-3">
                     Total Volume
@@ -129,18 +129,19 @@ function Booking() {
                 </label>
                 <div></div>
                 <input type="text" class="form-control mt-n3" id="input1" />
-                {/* <div class="input-group-append">
-    <span class="input-group-text">.00</span>
-  </div> */}
+               
+    <span className="group-text">cbm</span>
+
               </div>
 
-              <div>
+              <div  className="volume">
                 <label for="input1">
                   <span class="h6 small bg-white text-muted pt-1 pl-1 pr-1 ml-3">
                     Total Weight
                   </span>
                 </label>
                 <input type="text" className="form-control mt-n3" id="input1" />
+                <span className="group-text">Kg</span>
               </div>
             </div>
           </div>
